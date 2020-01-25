@@ -1,0 +1,135 @@
+* {
+	 margin: 0;
+	 padding: 0;
+	 text-decoration: none;
+	 box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	 display: none;
+}
+
+.wrapper {
+	 display: grid;
+	 grid-template-rows: 80px 1fr;
+}
+
+main {
+	 width: 100vw;
+	 display: flex;
+}
+
+section {
+	 width: 10vw;
+	 height: 100vh;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+}
+
+section:nth-child(odd) {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.7), 
+		rgba(0, 0, 0, 0.7)
+		), url(https://taz.de/picture/3716895/948/23894128.jpeg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+section:nth-child(even) {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.7), 
+		rgba(0, 0, 0, 0.7)
+		), url(https://georgebarr.com/photographs/wp-content/uploads/2017/04/ADM-side_6081-copy.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+section .heading {
+	transform: rotate(-90deg);
+}
+
+section .content .heading {
+	font-size: 4em;
+	margin: 0px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+section .content .sub-heading {
+	 display: none;
+	 font-family: Arial, Helvetica, sans-serif;
+	 color: white;
+	 padding: 40px;
+}
+
+ @media screen and (min-width: 981px) {
+	section {
+		 transition: all 0.4s cubic-bezier(.22, .77, .83, .67);
+	}
+
+	section:hover {
+		width: 50vw;
+	}
+
+	section:hover .heading {
+		width: 25vw;
+		margin: 50px;
+		font-size: 2em;
+	}
+
+	section:hover .sub-heading {
+		display: inline-block;
+	}
+	
+	section:nth-child(even):hover {
+		background: #FF5600;
+	}
+	
+	section:nth-child(even):hover .heading {
+		transform: rotate(0deg);
+	}
+	
+	section:nth-child(odd):hover {
+		width: 40vw;
+		background: #EC2DAD;
+	}
+	
+	section:nth-child(odd):hover .heading {
+		transform: rotate(0deg);
+	}
+	
+	section .heading {
+		transition: all 0.2s cubic-bezier(.22, .77, .83, .67);
+	}
+}
+ @media screen and (max-width: 980px) {
+	main {
+		 display: unset;
+		 margin-top: 80px;
+	}
+	
+	main section {
+		 float: left;
+		 width: 50vw;
+		 height: calc(50vh - 40px);
+		 border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	}
+	
+	main section .content {
+		 transform: rotate(0deg);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	main section {
+		 width: 100vw;
+		 border: none;
+	}
+}
+ 
