@@ -24,66 +24,163 @@ section {
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
+	 position: relative;
+	 overflow: hidden;
+}
+
+section .content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.sensorthinks {
+	pointer-events: none; 
+	z-index: 2; 
+	position: absolute;
+	right: 21vw; 
+	color: #EC2DAD;
+	font-size: 30vh;
+	line-height: 25vh; 
+	opacity: 0.8; 
+	font-weight:900; 
+	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
+	padding-bottom: -20vh;
+	right: 24vw; 
+	transition: all .3s ease;
+	transition-delay: 0.3s;
+}
+
+section:hover ~ .sensorthinks {
+	font-size: 10vh;
+	line-height: 10vh; 
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	right: 26vw; 
+}
+
+.date {
+	pointer-events: none; 
+	z-index: 3; 
+	position: absolute; 
+	right: -3vw; 
+	color: #FF590A; 
+	font-size: 25vh; 
+	line-height: 20vh; 
+	opacity: 0.8; 
+	font-weight:900; 
+	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
+	transition: all .3s ease;
+	transition-delay: 0.3s;
+	padding-bottom: -20vh;
+}
+
+section:hover ~ .date {
+	padding-top: 40vh;
+	font-size: 10vh;
+	line-height: 10vh; 
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	right: 20vw; 
+}
+
+section:hover ~ section:nth-child(7) {
+	background: green;
+}
+
+
+section:hover .content {
+	background-color: white;
+	transition: background-color .5s ease;
+	transition-delay: 0.5s;
+}
+
+section .background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	transform: scale(1.0);
+	transition: all .5s;
+}
+
+section:hover .background {
+	transform: scale(1.1);
+	transition: all .5s;
+	background-size: cover;
 }
 
 
 /* WIDTH OF COLUMNS */
 section:nth-child(1) {
-	width: 6.25vw;
-	background: linear-gradient(
-		rgba(255, 0, 255, 0.6), 
-		rgba(255, 0, 255, 0.6)
-		), url(https://www.chronik-berlin.de/images/bvg/u-plan39.jpg) repeat center center; 
+	width: 8.25vw;
+	overflow: hidden;
+}
+
+section:nth-child(1) .background {
+	background: url(../images/ubahn.png) no-repeat right center;
+	background-size: cover;
 }
 
 section:nth-child(2) {
-	width: 8vw;
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='20px' width='20px'><text x='0' y='15' fill='black' font-size='20'>XO</text></svg>"), #9E7525;
+	width: 6vw;
+}
+
+section:nth-child(2) .background {
+	background: url(../images/Zeitplan.png) repeat center center, linear-gradient(
+		#9e7525, 
+		#9e7525
+		);
+	background-size: 50px;
 }
 
 section:nth-child(3) {
 	width: 16vw;
-	background: linear-gradient(
-		rgba(255, 88, 7, 0.6), 
-		rgba(255, 88, 7, 0.6)
-		), url(https://georgebarr.com/photographs/wp-content/uploads/2017/04/ADM-side_6081-copy.jpg) no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+}
+
+section:nth-child(3) .background {
+	background: url(../images/preise.jpg) repeat center center;
 	background-size: cover;
 }
 
 section:nth-child(4) {
 	width: 12.5vw;
-	background: url("images/themen-bg.png")
+	
+}
+
+section:nth-child(4) .background {
+	background: url(../images/themen-bg.png) repeat center center;
+	background-size: cover;
 }
 
 section:nth-child(5) {
 	width: 6.5vw;
-	background: linear-gradient(
-		rgba(0, 0, 0, 0.5), 
-		rgba(0, 0, 0, 0.5)
-		), url(https://georgebarr.com/photographs/wp-content/uploads/2017/04/ADM-side_6081-copy.jpg) no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+}
+
+section:nth-child(5) .background {
+	background: url(../images/Jury.jpg) repeat center center;
 	background-size: cover;
 }
 
 section:nth-child(6) {
 	width: 12vw;
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='18px' width='28px'><text x='0' y='15' fill='#9E7525' font-size='20'>XX</text></svg>"), rgb(0, 0, 0);
 }
+
+section:nth-child(6) .background {
+	background: url(../images/sponsoren.jpg) repeat center center;
+	background-size: cover;
+}
+
 
 section:nth-child(7) {
 	width: 19vw;
-	background: linear-gradient(
-		rgba(0, 0, 0, 0.5), 
-		rgba(0, 0, 0, 0.5)
-		), url(https://georgebarr.com/photographs/wp-content/uploads/2017/04/ADM-side_6081-copy.jpg) no-repeat center center; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
+}
+
+section:nth-child(7) .background {
+	background: url(../images/Datum.jpg) repeat center center;
 	background-size: cover;
 }
 
@@ -101,6 +198,8 @@ section .heading {
 	transform: rotate(-90deg);
 	z-index: 10;
 }
+
+
 
 section .content .heading {
 	font-size: 1.5em;
@@ -125,11 +224,18 @@ section .content .sub-heading {
 
  @media screen and (min-width: 981px) {
 	section {
-		 transition: all 0.4s cubic-bezier(.22, .77, .83, .67);
+		transition: all 0.4s cubic-bezier(.22, .77, .83, .67);
+		transition-delay: 0.5s;
 	}
 
 	section:hover {
-		width: 50vw;
+		width: 30vw;
+		transition: all .5s;
+		transition-delay: 0.5s;
+	}
+
+	section:nth-child(7):hover {
+		width: 19vw !important;
 	}
 
 	section:hover .heading {
@@ -139,21 +245,27 @@ section .content .sub-heading {
 	}
 
 	section:hover .sub-heading {
-		display: inline-block;
+		display: inline;
+		opacity: 1;
+		transition: visibility 0s, opacity 0.5s linear;
+		transition-delay: 2s;
 	}
 	
-	section:nth-child(even):hover {
-		background: #FF5600;
-	}
+/*	section:nth-child(odd):hover {
+		transform: scale(1.1);
+		background-color: yellowgreen;
+  		-webkit-transition: background-color 2s ease-in;
+		transition: background-color 2s ease-in;
+  		-webkit-transition-delay: 2s;
+		transition-delay: 2s;
+		transition: all .5s;
+	}*/
 	
-	section:nth-child(even):hover .heading {
+	section:hover .heading {
 		transform: rotate(0deg);
+		transition-delay: 2s;
 	}
-	
-	section:nth-child(odd):hover {
-		width: 40vw;
-		background: #EC2DAD;
-	}
+
 	
 	section:nth-child(odd):hover .heading {
 		transform: rotate(0deg);
@@ -163,28 +275,3 @@ section .content .sub-heading {
 		transition: all 0.2s cubic-bezier(.22, .77, .83, .67);
 	}
 }
- @media screen and (max-width: 980px) {
-	main {
-		 display: unset;
-		 margin-top: 80px;
-	}
-	
-	main section {
-		 float: left;
-		 width: 50vw;
-		 height: calc(50vh - 40px);
-		 border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-	}
-	
-	main section .content {
-		 transform: rotate(0deg);
-	}
-}
-
-@media screen and (max-width: 480px) {
-	main section {
-		 width: 100vw;
-		 border: none;
-	}
-}
- 
