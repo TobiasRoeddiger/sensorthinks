@@ -48,14 +48,13 @@ br {
 	pointer-events: none; 
 	z-index: 2; 
 	position: absolute;
-	right: 21vw; 
+	right: 13vw; 
 	color: #EC2DAD;
 	font-size: 25vh;
 	line-height: 0.93em;
 	opacity: 0.9; 
 	font-weight:900; 
 	font-family: Montserrat;
-	right: 24vw; 
 	transition: all .5s ease;
 	transition-delay: 0.5s;
 	visibility: visible;
