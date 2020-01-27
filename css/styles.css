@@ -15,13 +15,15 @@
 }
 
 main {
-	 width: 100vw;
-	 display: flex;
+	width: 100vw;
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
 }
 
 section {
 	 height: 100vh;
-	 display: flex;
+	 display: block;
 	 align-items: center;
 	 justify-content: center;
 	 position: relative;
@@ -36,29 +38,34 @@ section .content {
 	height: 100%;
 }
 
+br {
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
 .sensorthinks {
 	pointer-events: none; 
 	z-index: 2; 
 	position: absolute;
 	right: 21vw; 
 	color: #EC2DAD;
-	font-size: 30vh;
-	line-height: 25vh; 
-	opacity: 0.8; 
+	font-size: 25vh;
+	line-height: 0.93em;
+	opacity: 0.9; 
 	font-weight:900; 
-	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
-	padding-bottom: -20vh;
+	font-family: Montserrat;
 	right: 24vw; 
-	transition: all .3s ease;
-	transition-delay: 0.3s;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	visibility: visible;
 }
 
 section:hover ~ .sensorthinks {
-	font-size: 10vh;
-	line-height: 10vh; 
+	visibility: hidden;
+	opacity: 0;
 	transition: all .5s ease;
 	transition-delay: 0.5s;
-	right: 26vw; 
 }
 
 .date {
@@ -67,27 +74,106 @@ section:hover ~ .sensorthinks {
 	position: absolute; 
 	right: -3vw; 
 	color: #FF590A; 
-	font-size: 25vh; 
-	line-height: 20vh; 
-	opacity: 0.8; 
+	font-size: 20vh;
+	line-height: 0.93em;
+	opacity: 0.9; 
 	font-weight:900; 
-	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
-	transition: all .3s ease;
-	transition-delay: 0.3s;
-	padding-bottom: -20vh;
+	font-family: Montserrat;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	visibility: visible;
+}
+
+.hackathon {
+
 }
 
 section:hover ~ .date {
-	padding-top: 40vh;
-	font-size: 10vh;
-	line-height: 10vh; 
+	visibility: hidden;
+	opacity: 0;
 	transition: all .5s ease;
 	transition-delay: 0.5s;
-	right: 20vw; 
 }
 
-section:hover ~ section:nth-child(7) {
-	background: green;
+section:hover ~ section:nth-of-type(7) .title {
+	opacity: 0.9;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+}
+
+section:nth-of-type(7) .title {
+	transform: rotate(-90deg);
+	opacity: 0.9;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+}
+
+section:hover .sectionTitle {
+	transform: rotate(0deg) translateX(-50%);
+	transition: all .5s ease;
+	transition-delay: .5s;
+	padding: 0.3em 0.6em 0.3em 0.6em;
+	width: 100%;
+	right: -50%;
+}
+
+.sectionTitle {
+	color: white;
+	background: black;
+	z-index: 150;
+	font-family: Montserrat;
+	font-weight: 700;
+	padding: 0.3em 0.6em 0em 0.6em;
+	right: 0;
+	transform: rotate(-90deg);
+	transition: all .5s ease;
+	transition-delay: .5s;
+	position: absolute;
+	transform-origin: 100% 100%;
+	font-size: 1.5em;
+}
+
+section:nth-of-type(7):hover .title {
+	opacity: 0.9;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+}
+
+section:nth-of-type(7) .title {
+	color: #FF590A; /*EC2DAD*/
+	font-weight: 900;
+	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
+	font-size: 9.5vw;
+	line-height: 8vw;
+	transform: rotate(-90deg);
+	z-index: 100;
+	opacity: 0.0;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	letter-spacing: 1vh;
+}
+
+section:hover ~ section:nth-of-type(7) .dateDetails {
+	opacity: 0.9;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+}
+
+section:hover ~ section:nth-of-type(7) .dateDetails {
+	width: 100vh;
+	color: #EC2DAD; /*EC2DAD*/
+	font-weight: 700;
+	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
+	font-size: 5vw;
+	line-height: 5vw;
+	transform: rotate(-90deg);
+	z-index: 100;
+	opacity: 0.0;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	letter-spacing: 1vh;
+	position: absolute;
+	right: 0;
 }
 
 
