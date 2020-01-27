@@ -115,6 +115,7 @@ section:hover .sectionTitle {
 	padding: 0.3em 0.6em 0.3em 0.6em;
 	width: 100%;
 	right: -50%;
+	margin-top: 0em;
 }
 
 .sectionTitle {
@@ -131,7 +132,8 @@ section:hover .sectionTitle {
 	position: absolute;
 	transform-origin: 100% 100%;
 	font-size: 1.5em;
-	width: 30vh;
+	width: 40vh;
+	margin-top: -1.5em;
 }
 
 section:nth-of-type(7):hover .title {
