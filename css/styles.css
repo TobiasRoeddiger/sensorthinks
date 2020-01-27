@@ -131,6 +131,7 @@ section:hover .sectionTitle {
 	position: absolute;
 	transform-origin: 100% 100%;
 	font-size: 1.5em;
+	width: 30vh;
 }
 
 section:nth-of-type(7):hover .title {
