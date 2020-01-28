@@ -225,19 +225,13 @@ section:nth-of-type(7) .title {
 	left: 1.6vw;
 }
 
-section:hover ~ section:nth-of-type(7) .dateDetails {
-	opacity: 0.9;
-	transition: all .5s ease;
-	transition-delay: 0.5s;
-}
-
-section:hover ~ section:nth-of-type(7) .dateDetails {
-	width: 100vh;
+section:nth-of-type(7) .dateDetails {
 	color: #EC2DAD; /*EC2DAD*/
-	font-weight: 700;
+	font-weight: 900;
 	font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
-	font-size: 5vw;
+	font-size: 6vw;
 	line-height: 5vw;
+	bottom: -0.5vh;
 	transform: rotate(-90deg);
 	z-index: 100;
 	opacity: 0.0;
@@ -245,7 +239,17 @@ section:hover ~ section:nth-of-type(7) .dateDetails {
 	transition-delay: 0.5s;
 	letter-spacing: 1vh;
 	position: absolute;
-	right: 0;
+	height: 100vh;
+	left: 7.2vw;
+	opacity: 0.9;
+	transition: all .5s ease;
+	transition-delay: 0.5s;
+	opacity: 0;
+	width: 100vh;
+}
+
+section:hover ~ section:nth-of-type(7)  .dateDetails {
+	opacity: 0.9;
 }
 
 
