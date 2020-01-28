@@ -201,11 +201,17 @@ section:hover ~ .sensorthinks {
    font-size: 13vh;
    z-index: 205;
    position: absolute;
-   left: -0.28em;
+   left: -0.29em;
    height: 100vh;
    letter-spacing: 0.087em;
    margin-top: -0.05em;
    mix-blend-mode: screen;
+   -webkit-transition: all .5s ease;
+   -o-transition: all .5s ease;
+   transition: all .5s ease;
+   -webkit-transition-delay: 0.5s;
+		-o-transition-delay: 0.5s;
+		   transition-delay: 0.5s;
 }
 
 section:hover ~ .date {
@@ -221,6 +227,16 @@ section:hover ~ .date {
 
 section:hover ~ section:nth-of-type(7) .title {
    opacity: 0.9;
+   -webkit-transition: all .5s ease;
+   -o-transition: all .5s ease;
+   transition: all .5s ease;
+   -webkit-transition-delay: 0.5s;
+		-o-transition-delay: 0.5s;
+		   transition-delay: 0.5s;
+}
+
+section:hover ~ section:nth-of-type(8) .hackathon {
+   mix-blend-mode: normal;
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
