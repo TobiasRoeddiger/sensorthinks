@@ -133,8 +133,8 @@ br {
    pointer-events: none; 
    z-index: 2; 
    position: absolute;
-   right: 30vw; 
-   color: rgba(255, 32, 182 , 1);
+   right: 31vw; 
+   color: rgba(255, 32, 182 , 0.87);
    font-size: 33.2vh;
    line-height: 0.75em;
    font-weight:900; 
@@ -150,7 +150,7 @@ br {
    overflow: hidden;
    z-index: 201;
    opacity: 1.0;
-   mix-blend-mode: screen;
+
 }
 
 section:hover ~ .sensorthinks {
@@ -168,7 +168,7 @@ section:hover ~ .sensorthinks {
    pointer-events: none; 
    z-index: 3; 
    position: absolute; 
-   right: -3vw; 
+   right: -5vw; 
    color: #FF590A; 
    font-size: 25.4vh;
    line-height: 0.79em;
