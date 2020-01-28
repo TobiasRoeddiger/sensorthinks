@@ -62,7 +62,7 @@ section .content-wrapper {
    -webkit-transition-delay: 0.5s;
 		-o-transition-delay: 0.5s;
 		   transition-delay: 0.5s;
-   padding: 1em;
+   padding: 2.3em;
    padding-top: 9vh;
    font-family: Montserrat;
 }
@@ -102,6 +102,8 @@ section:hover .content-wrapper {
 }
 
 section .content-wrapper .content {
+   line-height: 1.7em;
+   font-size: 0.7em;
    opacity: 0;
    visibility: hidden;
    -webkit-transition: all .5s ease;
@@ -111,6 +113,38 @@ section .content-wrapper .content {
 		-o-transition-delay: 0.5s;
 		   transition-delay: 0.5s;
 }
+
+section .content-wrapper .content b:nth-child(1) {
+   font-size: 1.3em;
+}
+
+.customTable td {
+   padding: 10px;
+}
+
+.highlight {
+   background-color: rgb(229, 229, 229);
+}
+
+.customTable tr:first-child td {
+   border-top: 2px solid rgb(255, 86, 0);
+   text-align: left;
+}
+
+.customTable tr td:first-child {
+   font-weight: 700;
+}
+
+.customTable tr td {
+   border-top: 1px solid lightgray;
+   text-align: left;
+}
+
+.customTable tr:last-child td {
+   border-bottom: 2px solid rgb(255, 86, 0);
+   text-align: left;
+}
+
 
 section:hover .content-wrapper .content {
    opacity: 1;
