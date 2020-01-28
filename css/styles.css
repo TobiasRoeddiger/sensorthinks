@@ -134,10 +134,9 @@ br {
    z-index: 2; 
    position: absolute;
    right: 30vw; 
-   color: #EC2DAD;
+   color: rgba(255, 32, 182 , 1);
    font-size: 33.2vh;
    line-height: 0.75em;
-   opacity: 0.8; 
    font-weight:900; 
    font-family: Montserrat;
    -webkit-transition: all .5s ease;
@@ -150,6 +149,8 @@ br {
    height: 100vh;
    overflow: hidden;
    z-index: 201;
+   opacity: 1.0;
+   mix-blend-mode: screen;
 }
 
 section:hover ~ .sensorthinks {
@@ -171,7 +172,7 @@ section:hover ~ .sensorthinks {
    color: #FF590A; 
    font-size: 25.4vh;
    line-height: 0.79em;
-   opacity: 0.9; 
+   opacity: 1.0; 
    font-weight:900; 
    font-family: Montserrat;
    -webkit-transition: all .5s ease;
@@ -185,6 +186,7 @@ section:hover ~ .sensorthinks {
    letter-spacing: 0.1em;
    overflow: hidden;
    height: 100vh;
+   mix-blend-mode: screen;
 }
 
 .hackathon {
@@ -193,7 +195,7 @@ section:hover ~ .sensorthinks {
 		   transform: rotate(-90deg);
    color: white;
    font-family: Montserrat;
-   color: #6EB2D1;
+   color: rgba(111, 178, 209, 1);
    font-weight: 900;
    opacity: 0.8;
    font-size: 13vh;
@@ -203,6 +205,7 @@ section:hover ~ .sensorthinks {
    height: 100vh;
    letter-spacing: 0.087em;
    margin-top: -0.05em;
+   mix-blend-mode: screen;
 }
 
 section:hover ~ .date {
@@ -421,7 +424,6 @@ section:nth-child(3) .background {
 
 section:nth-child(4) {
    width: 12.5vw;
-   
 }
 
 section:nth-child(4) .background {
@@ -453,7 +455,7 @@ section:nth-child(7) {
 }
 
 section:nth-child(7) .background {
-   background: url(../images/Datum.jpg) repeat center center;
+   background: url(../images/Datum.jpg) repeat center;
    background-size: cover;
 }
 
