@@ -175,7 +175,7 @@ section:nth-of-type(7) .title {
 
 section:hover .sectionTitle {
 	transform: rotate(0deg) translateX(-50%);
-	transition: all .5s ease;
+	transition: all .7s ease;
 	transition-delay: .5s;
 	padding: 0.3em 0.6em 0.3em 0.6em;
 	width: 100%;
