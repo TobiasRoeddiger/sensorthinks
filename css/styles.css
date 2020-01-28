@@ -181,6 +181,7 @@ section:hover .sectionTitle {
 	width: 100%;
 	right: -50%;
 	margin-top: 0em;
+	transform-origin: 0% 0%;
 }
 
 .sectionTitle {
@@ -372,13 +373,13 @@ section .heading {
 
  @media screen and (min-width: 981px) {
 	section {
-		transition: all 0.4s cubic-bezier(.22, .77, .83, .67);
+		transition: all 0.5s ease;
 		transition-delay: 0.5s;
 	}
 
 	section:hover {
 		width: 30vw;
-		transition: all .5s;
+		transition: all .5s ease;
 		transition-delay: 0.5s;
 	}
 
@@ -417,9 +418,5 @@ section .heading {
 	
 	section:nth-child(odd):hover .heading {
 		transform: rotate(0deg);
-	}
-	
-	section .heading {
-		transition: all 0.2s cubic-bezier(.22, .77, .83, .67);
 	}
 }
