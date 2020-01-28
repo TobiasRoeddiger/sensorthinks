@@ -111,7 +111,7 @@ section .content-wrapper .content {
    transition: all .5s ease;
    -webkit-transition-delay: 0.5s;
 		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
+         transition-delay: 0.5s;
 }
 
 hr {
@@ -124,7 +124,6 @@ hr {
 
 .highlight-orange {
    color:  rgb(255, 86, 0);
-   margin-left: 1em;
 }
 
 section .content-wrapper .content b:nth-child(1) {
