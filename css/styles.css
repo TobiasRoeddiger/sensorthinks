@@ -182,7 +182,7 @@ section:hover ~ .sensorthinks {
 		-o-transition-delay: 0.5s;
 		   transition-delay: 0.5s;
    visibility: visible;
-   z-index: 200;
+   z-index: 250;
    letter-spacing: 0.1em;
    overflow: hidden;
    height: 100vh;
@@ -197,7 +197,7 @@ section:hover ~ .sensorthinks {
    font-family: Montserrat;
    color: rgba(111, 178, 209, 1);
    font-weight: 900;
-   opacity: 0.8;
+   opacity: 1.0;
    font-size: 13vh;
    z-index: 205;
    position: absolute;
