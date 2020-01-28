@@ -114,6 +114,19 @@ section .content-wrapper .content {
 		   transition-delay: 0.5s;
 }
 
+hr {
+   border-top: 1px solid black;
+}
+
+.money {
+   font-size: 1.3em;
+}
+
+.highlight-orange {
+   color:  rgb(255, 86, 0);
+   margin-left: 1em;
+}
+
 section .content-wrapper .content b:nth-child(1) {
    font-size: 1.3em;
 }
