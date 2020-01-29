@@ -28,25 +28,14 @@
 }
 
 main {
-   width: 100vw;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   height: 100vh;
-   overflow: hidden;
+   display: inline-block;
 }
 
-section {
-	height: 100vh;
-	display: block;
-	-webkit-box-align: center;
-		-ms-flex-align: center;
-			align-items: center;
-	-webkit-box-pack: center;
-		-ms-flex-pack: center;
-			justify-content: center;
-	position: relative;
-	overflow: hidden;
+.mobileHeader {
+   display: block;
+   height: 50vh;
+   background: url(../images/Datum.jpg) repeat center;
+   background-size: cover;
 }
 
 section .content-wrapper {
@@ -65,6 +54,7 @@ section .content-wrapper {
    padding: 2.3em;
    padding-top: 9vh;
    font-family: Montserrat;
+   overflow: auto;
 }
 
 .social:hover {
@@ -214,12 +204,12 @@ section:hover ~ .sensorthinks {
    pointer-events: none; 
    z-index: 3; 
    position: absolute; 
-   right: -5vw; 
    color: #FF590A; 
    font-size: 25.4vh;
    line-height: 0.79em;
    opacity: 1.0; 
    font-weight:900; 
+   right: 0;
    font-family: Montserrat;
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
@@ -304,51 +294,6 @@ section:nth-of-type(7) .title {
 		   transition-delay: 0.5s;
 }
 
-section:hover .sectionTitle {
-   -webkit-transform: rotate(0deg) translateX(-50%);
-	   -ms-transform: rotate(0deg) translateX(-50%);
-		   transform: rotate(0deg) translateX(-50%);
-   -webkit-transition: all .7s ease;
-   -o-transition: all .7s ease;
-   transition: all .7s ease;
-   -webkit-transition-delay: .5s;
-		-o-transition-delay: .5s;
-		   transition-delay: .5s;
-   padding: 0.3em 0.6em 0.3em 0.6em;
-   width: 100%;
-   right: -50%;
-   margin-top: 0em;
-   -webkit-transform-origin: 0% 0%;
-	   -ms-transform-origin: 0% 0%;
-		   transform-origin: 0% 0%;
-}
-
-.sectionTitle {
-   color: white;
-   background: black;
-   z-index: 150;
-   font-family: Montserrat;
-   font-weight: 700;
-   padding: 0.3em 0.6em 0em 0.6em;
-   right: 0;
-   -webkit-transform: rotate(-90deg);
-	   -ms-transform: rotate(-90deg);
-		   transform: rotate(-90deg);
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: .5s;
-		-o-transition-delay: .5s;
-		   transition-delay: .5s;
-   position: absolute;
-   -webkit-transform-origin: 100% 100%;
-	   -ms-transform-origin: 100% 100%;
-		   transform-origin: 100% 100%;
-   font-size: 1.5em;
-   width: 400px;
-   margin-top: -1.5em;
-}
-
 section:nth-of-type(7):hover .title {
    opacity: 0.9;
    -webkit-transition: all .5s ease;
@@ -418,6 +363,56 @@ section:hover ~ section:nth-of-type(7)  .dateDetails {
 }
 
 
+
+
+/* OVERALL SECTION DEFINITIONS*/
+section {
+   width: 100vw;
+   height: 20vh;
+   overflow: hidden;
+   position: relative;
+   -webkit-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+   transition-delay: .5s;
+}
+
+
+section:hover {
+   display: block;
+   z-index: 400;
+   -webkit-transition: all .5s;
+   -o-transition: all .5s;
+   transition: all .5s;
+   transition-delay: .5s;
+   overflow: hidden;
+   height: 75vh;
+}
+
+section .sectionTitle .expansionIcon {
+   float: right;
+   opacity: 1.0;
+}
+
+section .sectionTitle .collapseIcon {
+   float: right;
+   opacity: 0.0;
+}
+
+section:hover .sectionTitle .expansionIcon {
+   transform: rotate(180deg);
+   transition: all .5s ease;
+   transition-delay: .5s;
+   opacity: 0.0;
+}
+
+section:hover .sectionTitle .collapseIcon {
+   transform: rotate(180deg);
+   transition: all .5s ease;
+   transition-delay: .5s;
+   opacity: 1.0;
+}
+
 section .background {
    position: absolute;
    left: 0;
@@ -432,6 +427,8 @@ section .background {
    transition: all .5s;
 }
 
+
+
 section:hover .background {
    -webkit-transform: scale(1.1);
 	   -ms-transform: scale(1.1);
@@ -443,41 +440,18 @@ section:hover .background {
 }
 
 
-/* WIDTH OF COLUMNS */
-section:nth-child(1) {
-   width: 8.25vw;
-   overflow: hidden;
-}
-
+/* SECTION BACKGROUNDS */
 section:nth-child(1) .background {
    background: url(../images/ubahn.png) no-repeat right center;
    background-size: cover;
 }
 
-section:nth-child(2) {
-   width: 6vw;
-}
-
 section:nth-child(2) .background {
-   background: url(../images/Zeitplan.png) repeat center center, -webkit-gradient(
-	   linear, 
-	   left top, left bottom, 
-	   from(#9e7525), 
-	   to(#9e7525)
-	   );
-   background: url(../images/Zeitplan.png) repeat center center, -o-linear-gradient(
-	   #9e7525, 
-	   #9e7525
-	   );
-   background: url(../images/Zeitplan.png) repeat center center, linear-gradient(
-	   #9e7525, 
-	   #9e7525
-	   );
+   background-image: url(../images/Zeitplan.png);
+   background-position: center;
+   background-repeat: repeat;
+   background-color: #9e7525;
    background-size: 50px;
-}
-
-section:nth-child(3) {
-   width: 16vw;
 }
 
 section:nth-child(3) .background {
@@ -485,17 +459,9 @@ section:nth-child(3) .background {
    background-size: cover;
 }
 
-section:nth-child(4) {
-   width: 12.5vw;
-}
-
 section:nth-child(4) .background {
    background: url(../images/themen-bg.png) repeat center center;
    background-size: cover;
-}
-
-section:nth-child(5) {
-   width: 6.5vw;
 }
 
 section:nth-child(5) .background {
@@ -503,18 +469,9 @@ section:nth-child(5) .background {
    background-size: cover;
 }
 
-section:nth-child(6) {
-   width: 12vw;
-}
-
 section:nth-child(6) .background {
    background: url(../images/sponsoren.jpg) repeat center center;
    background-size: cover;
-}
-
-
-section:nth-child(7) {
-   width: 19vw;
 }
 
 section:nth-child(7) .background {
@@ -522,51 +479,105 @@ section:nth-child(7) .background {
    background-size: cover;
 }
 
-section:nth-child(8) {
-   width: 13vw;
-}
-
 section:nth-child(8) .background {
-   background: url(../images/ampelmaennchen.png) repeat center center, -webkit-gradient(
-	   linear, 
-	   left top, left bottom, 
-	   from(black), 
-	   to(black)
-	   );
-   background: url(../images/ampelmaennchen.png) repeat center center, -o-linear-gradient(
-	   black, 
-	   black
-	   );
-   background: url(../images/ampelmaennchen.png) repeat center center, linear-gradient(
-	   black, 
-	   black
-	   );
+   background-image: url(../images/ampelmaennchen.png);
+   background-repeat: repeat;
    background-size: 50px;
+   background-color: black;
    background-origin: padding-box;
+   background-position: center;
    padding: 50px;
-}
-
-section:nth-child(9) {
-   width: 6.75vw;
 }
 
 section:nth-child(9) .background {
    background: url(../images/FAQ_orange.jpg) repeat center center;
 }
 
-
-
-
-section .heading {
-   -webkit-transform: rotate(-90deg);
-	   -ms-transform: rotate(-90deg);
-		   transform: rotate(-90deg);
-   z-index: 10;
+.sectionTitle {
+   color: white;
+   background: black;
+   z-index: 150;
+   font-family: Montserrat;
+   font-weight: 700;
+   padding: 0.3em 0.6em 0.3em 0.6em;
+   position: absolute;
+   font-size: 1.5em;
+   width: 100vw;
+   border-top: 2px solid white;
 }
 
+
+/* EXPAND ELEMENTS WHEN SCREEN IS WIDE ENOUGH */
 @media screen and (min-width: 981px) {
+
+   main {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+   }
+
+   .mobileHeader {
+      width: 0;
+      display: none;
+   }
+
+   .expansionIcon {
+      display: none;
+   }
+
+   section:hover .sectionTitle {
+      -webkit-transform: rotate(0deg) translateX(-50%);
+         -ms-transform: rotate(0deg) translateX(-50%);
+            transform: rotate(0deg) translateX(-50%);
+      -webkit-transition: all .7s ease;
+      -o-transition: all .7s ease;
+      transition: all .7s ease;
+      -webkit-transition-delay: .5s;
+         -o-transition-delay: .5s;
+            transition-delay: .5s;
+      padding: 0.3em 0.6em 0.3em 0.6em;
+      width: 100%;
+      right: -50%;
+      margin-top: 0 !important;
+      -webkit-transform-origin: 0% 0%;
+         -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+   }
+   
+   .sectionTitle {
+      padding: 0.3em 0.6em 0em 0.6em;
+      right: 0;
+      -webkit-transform: rotate(-90deg);
+         -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: .5s;
+         -o-transition-delay: .5s;
+            transition-delay: .5s;
+      position: absolute;
+      -webkit-transform-origin: 100% 100%;
+         -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+      font-size: 1.5em;
+      width: 400px;
+      margin-top: -1.5em !important;
+      border-top: 0px solid white;
+   }
+
    section {
-	   -webkit-transition: all 0.5s ease;
+      height: 100vh;
+      display: block;
+      -webkit-box-align: center;
+         -ms-flex-align: center;
+            align-items: center;
+      -webkit-box-pack: center;
+         -ms-flex-pack: center;
+            justify-content: center;
+      position: relative !important;
+      overflow: hidden;
+      -webkit-transition: all 0.5s ease;
 	   -o-transition: all 0.5s ease;
 	   transition: all 0.5s ease;
 	   -webkit-transition-delay: 0.5s;
@@ -575,7 +586,7 @@ section .heading {
    }
 
    section:hover {
-	   width: 30vw;
+	   width: 30vw !important;
 	   -webkit-transition: all .5s ease;
 	   -o-transition: all .5s ease;
 	   transition: all .5s ease;
@@ -584,40 +595,40 @@ section .heading {
 			   transition-delay: 0.5s;
    }
 
-   section:nth-child(7):hover {
-	   width: 19vw !important;
+   /* WIDTH OF COLUMNS ON WIDER SCREENS */
+   section:nth-child(1) {
+      width: 8.25vw;
    }
 
-   section:hover .heading {
-	   margin-left: 40px;
-	   font-size: 2em;
-	   padding: 0.3em 0.3em 0.3em 0.3em;
+   section:nth-child(2) {
+      width: 6vw;
    }
 
-   section:hover .sub-heading {
-	   display: inline;
-	   opacity: 1;
-	   -webkit-transition: visibility 0s, opacity 0.5s linear;
-	   -o-transition: visibility 0s, opacity 0.5s linear;
-	   transition: visibility 0s, opacity 0.5s linear;
-	   -webkit-transition-delay: 2s;
-			-o-transition-delay: 2s;
-			   transition-delay: 2s;
-   }
-   
-   section:hover .heading {
-	   -webkit-transform: rotate(0deg);
-		   -ms-transform: rotate(0deg);
-			   transform: rotate(0deg);
-	   -webkit-transition-delay: 2s;
-			-o-transition-delay: 2s;
-			   transition-delay: 2s;
+   section:nth-child(3) {
+      width: 16vw;
    }
 
-   
-   section:nth-child(odd):hover .heading {
-	   -webkit-transform: rotate(0deg);
-		   -ms-transform: rotate(0deg);
-			   transform: rotate(0deg);
+   section:nth-child(4) {
+      width: 12.5vw;
+   }
+
+   section:nth-child(5) {
+      width: 6.5vw;
+   }
+
+   section:nth-child(6) {
+      width: 12vw;
+   }
+
+   section:nth-child(7) {
+      width: 19vw;
+   }
+
+   section:nth-child(8) {
+      width: 13vw;
+   }
+
+   section:nth-child(9) {
+      width: 6.75vw;
    }
 }
