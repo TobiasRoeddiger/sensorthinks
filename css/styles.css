@@ -107,7 +107,7 @@ section:hover .content-wrapper {
 
 section .content-wrapper .content {
    line-height: 1.7em;
-   font-size: 0.7em;
+   font-size: 1em;
    opacity: 0;
    visibility: hidden;
    -webkit-transition: all .5s ease;
@@ -327,8 +327,8 @@ section:nth-of-type(7) .dateDetails {
 
 .question {
    font-weight: 700; 
-   padding-top: 2em;
-   border-bottom: 1px solid black;
+   padding-top: 1.2em;
+   border-bottom: 2px solid black;
 }
 
 .answer {
