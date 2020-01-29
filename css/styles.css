@@ -367,6 +367,28 @@ section:hover ~ section:nth-of-type(7)  .dateDetails {
    opacity: 1.0;
 }
 
+.question {
+   font-weight: 700; 
+   padding-top: 2em;
+   border-bottom: 1px solid black;
+}
+
+.answer {
+   margin-top: 0.5em;
+   display: none;
+}
+
+.question:hover + .answer {
+   display: inline-block;
+}
+
+.question:active + .answer {
+   display: inline-block;
+}
+
+.answer:hover {
+   display: inline-block;
+}
 
 
 
@@ -391,7 +413,7 @@ section:hover, section:active {
    transition: all .5s;
    transition-delay: .5s;
    overflow: hidden;
-   height: 75vh;
+   /*height: 75vh;*/
 }
 
 section .sectionTitle .expansionIcon {
