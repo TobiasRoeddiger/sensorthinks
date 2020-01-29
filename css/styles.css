@@ -446,8 +446,9 @@ section:hover .background {
 
 /* SECTION BACKGROUNDS */
 section:nth-child(1) .background {
-   background: url(../images/ubahn.png) no-repeat right center;
+   background: url(../images/ubahn.png) no-repeat center center;
    background-size: cover;
+   transform: scale(1.4)
 }
 
 section:nth-child(2) .background {
