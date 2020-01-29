@@ -221,8 +221,8 @@ br {
    text-align: left;
 }
 
-.mobileHackathon {
-
+.hackathonMobile {
+   display: none;
 }
 
 .sensorthinks div {
@@ -596,6 +596,10 @@ section:nth-child(9) .background {
          -o-transition-delay: 0.5s;
             transition-delay: 0.5s;
       top: 0;
+   }
+
+   .hackathonMobile {
+      display: inline-block;
    }
 
    .socialContainer {
