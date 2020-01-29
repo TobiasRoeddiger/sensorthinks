@@ -448,7 +448,6 @@ section:hover .background {
 section:nth-child(1) .background {
    background: url(../images/ubahn.png) no-repeat center center;
    background-size: cover;
-   transform: scale(1.4)
 }
 
 section:nth-child(2) .background {
