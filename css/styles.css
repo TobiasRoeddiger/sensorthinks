@@ -572,6 +572,7 @@ section:nth-child(9) .background {
       -webkit-transition-delay: 0.5s;
          -o-transition-delay: 0.5s;
             transition-delay: 0.5s;
+      top: 0;
    }
 
    .socialContainer {
