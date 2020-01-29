@@ -410,29 +410,25 @@ section:hover, section:active {
    /*height: 75vh;*/
 }
 
-section .sectionTitle .expansionIcon {
+section .sectionTitle:after {
+   content: '+';
    float: right;
-   opacity: 1.0;
+   transition: all .5s;
+   transform: rotate(0deg);
 }
 
-section .sectionTitle .collapseIcon {
+section:hover .sectionTitle:after {
    float: right;
-   opacity: 0.0;
+   transform: rotate(360deg);
+   content: "+";
 }
 
-section:hover .sectionTitle .expansionIcon {
-   transform: rotate(180deg);
-   transition: all .5s ease;
-   transition-delay: .5s;
-   opacity: 0.0;
-}
-
-section:hover .sectionTitle .collapseIcon {
-   transform: rotate(180deg);
-   transition: all .5s ease;
-   transition-delay: .5s;
+section:active .sectionTitle:after {
+   float:right;
    opacity: 1.0;
+   content: "+";
 }
+
 
 section .background {
    position: absolute;
@@ -683,6 +679,18 @@ section:nth-child(9) .background {
       width: 400px;
       margin-top: -1.5em !important;
       border-top: 0px solid white;
+   }
+
+   section .sectionTitle:after {
+      content: '';
+   }
+   
+   section:hover .sectionTitle:after {
+      content: "";
+   }
+
+   section:hover .sectionTitle:active {
+      content: "";
    }
 
    .date {
