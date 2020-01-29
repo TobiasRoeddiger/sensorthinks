@@ -331,6 +331,25 @@ section:nth-of-type(7) .dateDetails {
    border-bottom: 2px solid black;
 }
 
+button {
+   outline: none;
+   background-color: black;
+   border: 2px solid black;
+   font-family: Montserrat;
+   font-weight: 900;
+   color: white; 
+   padding: 10px;
+   letter-spacing: 0.2em;
+}
+
+button:hover {
+   background-color: darkgray;
+   font-family: Montserrat;
+   font-weight: 900;
+   color: black; 
+   padding: 10px;
+}
+
 .answer {
    margin-top: 0.5em;
    display: none;
@@ -673,7 +692,7 @@ section:nth-child(9) .background {
    }
 
    section:hover {
-	   width: 30vw !important;
+	   width: 40vw !important;
 	   -webkit-transition: all .5s ease;
 	   -o-transition: all .5s ease;
 	   transition: all .5s ease;
