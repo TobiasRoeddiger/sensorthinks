@@ -489,6 +489,7 @@ section:nth-child(9) .background {
    font-size: 1.5em;
    width: 100vw;
    border-top: 2px solid white;
+   letter-spacing: 0.2em;
 }
 
 
