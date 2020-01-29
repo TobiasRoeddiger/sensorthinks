@@ -331,6 +331,21 @@ section:nth-of-type(7) .dateDetails {
    border-bottom: 2px solid black;
 }
 
+.question:before {
+   content: '🡺';
+   display: inline-block;
+   margin-right: 0.3em;
+   transition: all .3s;
+}
+
+.question:hover:before {
+   transform: rotate(90deg);
+}
+
+.faqItem:hover .question:before {
+   transform: rotate(90deg);
+}
+
 button {
    outline: none;
    background-color: black;
@@ -350,17 +365,19 @@ button:hover {
    padding: 10px;
 }
 
+.faqItem:hover .answer {
+   display: inline-block;
+}
+
+.faqItem:active .answer {
+   display: inline-block;
+}
+
+
+
 .answer {
    margin-top: 0.5em;
    display: none;
-}
-
-.question:hover + .answer {
-   display: inline-block;
-}
-
-.question:active + .answer {
-   display: inline-block;
 }
 
 .answer:hover {
