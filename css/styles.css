@@ -28,12 +28,13 @@
 }
 
 main {
+   margin-top: 40vh; /* HACK */
    display: inline-block;
 }
 
 .mobileHeader {
-   display: block;
-   height: 50vh;
+   display: inline-flex;
+   height: 62vh; /* HACK */
    background: url(../images/Datum.jpg) repeat center;
    background-size: cover;
 }
@@ -169,11 +170,12 @@ br {
    pointer-events: none; 
    z-index: 2; 
    position: absolute;
-   right: 31vw; 
+   left: 0; 
+   top: 0;
    color: rgba(255, 32, 182 , 0.87);
-   font-size: 33.2vh;
-   line-height: 0.75em;
-   font-weight:900; 
+   font-size: 15.5vh;
+   line-height: 0.8em;
+   font-weight: 900; 
    font-family: Montserrat;
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
@@ -184,9 +186,32 @@ br {
    visibility: visible;
    height: 100vh;
    overflow: hidden;
-   z-index: 201;
+   z-index: 5;
    opacity: 1.0;
+}
 
+.date {
+   pointer-events: none; 
+   z-index: 6; 
+   position: absolute; 
+   color: #FF590A; 
+   font-size: 12.4vh;
+   line-height: 0.8em;
+   opacity: 1.0; 
+   font-weight:900; 
+   right: -2vw;
+   font-family: Montserrat;
+   visibility: visible;
+   letter-spacing: 0.1em;
+   overflow: hidden;
+   mix-blend-mode: screen;
+   top: 0;
+   text-align: right;
+}
+
+.sensorthinks div {
+   display: block;
+   white-space: nowrap;
 }
 
 section:hover ~ .sensorthinks {
@@ -198,31 +223,6 @@ section:hover ~ .sensorthinks {
    -webkit-transition-delay: 0.5s;
 		-o-transition-delay: 0.5s;
 		   transition-delay: 0.5s;
-}
-
-.date {
-   pointer-events: none; 
-   z-index: 3; 
-   position: absolute; 
-   color: #FF590A; 
-   font-size: 25.4vh;
-   line-height: 0.79em;
-   opacity: 1.0; 
-   font-weight:900; 
-   right: 0;
-   font-family: Montserrat;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
-   visibility: visible;
-   z-index: 250;
-   letter-spacing: 0.1em;
-   overflow: hidden;
-   height: 100vh;
-   mix-blend-mode: screen;
 }
 
 .hackathon {
@@ -509,9 +509,9 @@ section:nth-child(9) .background {
 
 /* EXPAND ELEMENTS WHEN SCREEN IS WIDE ENOUGH */
 @media screen and (min-width: 981px) {
-
    main {
-      display: flex;
+      margin-top: 0; /* HACK */
+      display: inline-flex;
       width: 100vw;
       height: 100vh;
    }
@@ -523,6 +523,44 @@ section:nth-child(9) .background {
 
    .expansionIcon {
       display: none;
+   }
+
+   .sensorthinks {
+      right: 31vw !important; 
+      font-size: 33.2vh;
+      line-height: 0.75em;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+      visibility: visible;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 201;
+      opacity: 1.0;
+      left: auto;
+      margin-top: 0;
+   }
+
+   .date {
+      font-size: 25.4vh;
+      line-height: 0.79em;
+      opacity: 1.0; 
+      font-weight:900; 
+      right: 0;
+      font-family: Montserrat;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+      visibility: visible;
+      z-index: 250;
+      letter-spacing: 0.1em;
+      height: 100vh;
    }
 
    section:hover .sectionTitle {
