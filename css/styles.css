@@ -230,17 +230,6 @@ br {
    white-space: nowrap;
 }
 
-section:hover ~ .sensorthinks {
-   visibility: visible;
-   opacity: 1.0;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
-}
-
 .hackathon {
    font-family: Montserrat;
    color: rgba(111, 178, 209, 1);
@@ -266,16 +255,6 @@ section:nth-child(7) {
    display: none;
 }
 
-section:hover ~ section:nth-of-type(7) .title {
-   opacity: 0.9;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
-}
-
 section:hover ~ section:nth-of-type(8) .hackathon {
    mix-blend-mode: normal;
    -webkit-transition: all .5s ease;
@@ -286,51 +265,32 @@ section:hover ~ section:nth-of-type(8) .hackathon {
 		   transition-delay: 0.5s;
 }
 
-section:nth-of-type(7) .title {
-   -webkit-transform: rotate(-90deg);
-	   -ms-transform: rotate(-90deg);
-		   transform: rotate(-90deg);
-   opacity: 0.9;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
-}
-
-section:nth-of-type(7):hover .title {
-   opacity: 0.9;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
+section:nth-of-type(7)
+{
+   position: relative !important;
 }
 
 section:nth-of-type(7) .title {
+   opacity: 0;
    color: #FF590A; /*EC2DAD*/
    font-weight: 900;
    font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
-   font-size: 11.2vw;
-   line-height: 8.6vw;
-   bottom: -2vh;
    -webkit-transform: rotate(-90deg);
-	   -ms-transform: rotate(-90deg);
-		   transform: rotate(-90deg);
-   z-index: 100;
-   opacity: 0.0;
+   -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+   font-size: 13vh;
+   z-index: 205;
+   left: -0.29em;
+   letter-spacing: 0.087em;
+   margin-top: -0.05em;
+   mix-blend-mode: screen;
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
-   letter-spacing: 0.8vh;
-   position: absolute;
-   width: 100%;
-   left: 0%;
+transition: all .5s ease;
+-webkit-transition-delay: 0.5s;
+   -o-transition-delay: 0.5s;
+      transition-delay: 0.5s;
+   top: 0;
 }
 
 section:nth-of-type(7) .dateDetails {
@@ -363,9 +323,7 @@ section:nth-of-type(7) .dateDetails {
    mix-blend-mode: screen;
 }
 
-section:hover ~ section:nth-of-type(7)  .dateDetails {
-   opacity: 1.0;
-}
+
 
 .question {
    font-weight: 700; 
@@ -550,16 +508,7 @@ section:nth-child(9) .background {
       width: 7vh;
    }
 
-   section:hover ~ .date {
-      visibility: hidden;
-      opacity: 0.0;
-      -webkit-transition: all .5s ease;
-      -o-transition: all .5s ease;
-      transition: all .5s ease;
-      -webkit-transition-delay: 0.5s;
-         -o-transition-delay: 0.5s;
-            transition-delay: 0.5s;
-   }
+
    
    main {
       margin-top: 0; /* HACK */
@@ -609,17 +558,6 @@ section:nth-child(9) .background {
       bottom: 0;
       margin-bottom: 4vh;
       z-index: 1000;
-   }
-   
-   section:hover ~ .sensorthinks {
-      visibility: hidden;
-      opacity: 0.0;
-      -webkit-transition: all .5s ease;
-      -o-transition: all .5s ease;
-      transition: all .5s ease;
-      -webkit-transition-delay: 0.5s;
-         -o-transition-delay: 0.5s;
-            transition-delay: 0.5s;
    }
 
    .sensorthinks {
@@ -778,5 +716,41 @@ section:nth-child(9) .background {
 
    section:nth-child(9) {
       width: 6.75vw;
+   }
+
+   main:hover .sensorthinks {
+      visibility: hidden;
+      opacity: 0.0;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+   }
+
+   main:hover .date {
+      visibility: hidden;
+      opacity: 0.0;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+   }
+
+   main:hover .title {
+      opacity: 0.9;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+   }
+
+   main:hover  .dateDetails {
+      opacity: 1.0;
    }
 }
