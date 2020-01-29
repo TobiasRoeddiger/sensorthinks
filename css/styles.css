@@ -218,7 +218,7 @@ br {
    overflow: hidden;
    mix-blend-mode: screen;
    top: 0;
-   text-align: right;
+   text-align: left;
 }
 
 .mobileHackathon {
@@ -564,8 +564,9 @@ section:nth-child(9) .background {
    main {
       margin-top: 0; /* HACK */
       display: inline-flex;
-      width: 100vw;
+      width: 100vw !important;
       height: 100vh;
+      overflow: hidden;
    }
 
    .mobileHeader {
@@ -703,6 +704,10 @@ section:nth-child(9) .background {
       width: 400px;
       margin-top: -1.5em !important;
       border-top: 0px solid white;
+   }
+
+   .date {
+      text-align: left;
    }
 
    section {
