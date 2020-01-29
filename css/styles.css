@@ -613,6 +613,10 @@ section:nth-child(9) .background {
       margin-top: 0;
    }
 
+   section:hover {
+      height: 100vh;
+   }
+
    section:nth-child(7) {
       display: block;
    }
