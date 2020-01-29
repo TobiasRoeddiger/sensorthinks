@@ -60,7 +60,7 @@ section .content-wrapper {
 
 .social:hover {
    background-color: white;
-   width: 7vh;
+   width: 9vh;
    -webkit-transition: all 0.2s ease;
    -o-transition: all 0.2s ease;
    transition: all 0.2s ease;
@@ -73,12 +73,24 @@ section .content-wrapper {
 }
 
 .social {
-   width: 5vh; 
-   height: 5vh; 
-   position: absolute; 
-   left: 0; 
+   width: 7vh; 
+   height: 7vh; 
    background-color: black;
+   z-index: 1000;
+   display: flex;
+   align-items: right;
+   margin: 1vh 0vh;
+   margin-left: auto;
 }
+
+.socialContainer {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   margin-bottom: 4vh;
+   z-index: 1000;
+}
+
 
 section:hover .content-wrapper {
    opacity: 1;
@@ -253,6 +265,10 @@ section:hover ~ .date {
    -webkit-transition-delay: 0.5s;
 		-o-transition-delay: 0.5s;
 		   transition-delay: 0.5s;
+}
+
+section:nth-child(7) {
+   display: none;
 }
 
 section:hover ~ section:nth-of-type(7) .title {
@@ -503,6 +519,21 @@ section:nth-child(9) .background {
 
 /* EXPAND ELEMENTS WHEN SCREEN IS WIDE ENOUGH */
 @media screen and (min-width: 981px) {
+
+   .social {
+      width: 5vh; 
+      height: 5vh; 
+      margin: 0.5vh 0vh;
+      background-color: black;
+      z-index: 1000;
+      border-top: 0px solid white;
+   }
+
+   .social:hover {
+      width: 7vh;
+   }
+
+   
    main {
       margin-top: 0; /* HACK */
       display: inline-flex;
@@ -537,6 +568,15 @@ section:nth-child(9) .background {
          -o-transition-delay: 0.5s;
             transition-delay: 0.5s;
    }
+
+   .socialContainer {
+      position: fixed;
+      left: 0;
+      right: auto;
+      bottom: 0;
+      margin-bottom: 4vh;
+      z-index: 1000;
+   }
    
 
    .sensorthinks {
@@ -558,6 +598,10 @@ section:nth-child(9) .background {
       margin-top: 0;
    }
 
+   section:nth-child(7) {
+      display: block;
+   }
+
    .date {
       font-size: 25.4vh;
       line-height: 0.79em;
@@ -575,6 +619,7 @@ section:nth-child(9) .background {
       z-index: 250;
       letter-spacing: 0.1em;
       height: 100vh;
+      mix-blend-mode: screen;
    }
 
    section:hover .sectionTitle {
