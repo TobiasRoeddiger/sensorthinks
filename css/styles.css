@@ -209,11 +209,7 @@ br {
 }
 
 .mobileHackathon {
-   position: absolute;
-   top: 35vh;
-   left: 1vw !important;
-   transform: rotate(0deg) !important;
-   font-size: 12.6vw !important;
+
 }
 
 .sensorthinks div {
@@ -233,28 +229,19 @@ section:hover ~ .sensorthinks {
 }
 
 .hackathon {
-   -webkit-transform: rotate(-90deg);
-	   -ms-transform: rotate(-90deg);
-		   transform: rotate(-90deg);
-   color: white;
    font-family: Montserrat;
    color: rgba(111, 178, 209, 1);
    font-weight: 900;
    opacity: 1.0;
-   font-size: 13vh;
    z-index: 205;
    position: absolute;
-   left: -0.29em;
-   height: 100vh;
    letter-spacing: 0.087em;
    margin-top: -0.05em;
    mix-blend-mode: screen;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
+   top: 35vh;
+   left: 1vw;
+   transform: rotate(0deg);
+   font-size: 12.6vw;
 }
 
 section:hover ~ .date {
@@ -531,6 +518,26 @@ section:nth-child(9) .background {
    .expansionIcon {
       display: none;
    }
+
+   .hackathon {
+      -webkit-transform: rotate(-90deg);
+         -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+      color: rgba(111, 178, 209, 1);
+      font-size: 13vh;
+      z-index: 205;
+      left: -0.29em;
+      letter-spacing: 0.087em;
+      margin-top: -0.05em;
+      mix-blend-mode: screen;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+   }
+   
 
    .sensorthinks {
       right: 31vw !important; 
