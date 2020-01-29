@@ -378,7 +378,7 @@ section {
 }
 
 
-section:hover {
+section:hover, section:active {
    display: block;
    z-index: 400;
    -webkit-transition: all .5s;
@@ -585,7 +585,7 @@ section:nth-child(9) .background {
 			   transition-delay: 0.5s;
    }
 
-   section:hover, section:active {
+   section:hover {
 	   width: 30vw !important;
 	   -webkit-transition: all .5s ease;
 	   -o-transition: all .5s ease;
