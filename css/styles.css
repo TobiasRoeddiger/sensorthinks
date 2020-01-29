@@ -420,13 +420,13 @@ section .sectionTitle:after {
 section:hover .sectionTitle:after {
    float: right;
    transform: rotate(360deg);
-   content: "+";
+   content: "-";
 }
 
 section:active .sectionTitle:after {
    float:right;
    opacity: 1.0;
-   content: "+";
+   content: "-";
 }
 
 
