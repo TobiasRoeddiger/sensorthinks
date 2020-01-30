@@ -28,13 +28,13 @@
 }
 
 main {
-   margin-top: calc(43.5vh - 80px); /* HACK */
+   margin-top: calc(37.5vh - 80px); /* HACK */
    display: inline-block;
 }
 
 .mobileHeader {
    display: inline-flex;
-   height:  43.5vh; /* HACK */
+   height:  37.5vh; /* HACK */
    background: url(../images/Datum.jpg) repeat center;
    background-size: cover;
    position: relative;
@@ -190,12 +190,7 @@ br {
    line-height: 0.8em;
    font-weight: 900; 
    font-family: Montserrat;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
+   
    visibility: visible;
    overflow: hidden;
    z-index: 5;
@@ -211,7 +206,7 @@ br {
    line-height: 0.8em;
    opacity: 1.0; 
    font-weight:900; 
-   right: 0;
+   right: 10vw;
    font-family: Montserrat;
    visibility: visible;
    letter-spacing: 0.1em;
@@ -241,9 +236,10 @@ br {
    margin-top: -0.05em;
    mix-blend-mode: screen;
    bottom: 0;
-   left: 1vw;
+   left: 0;
    transform: rotate(0deg);
    font-size: 12.6vw;
+   line-height: 0.76em;
 }
 
 section:hover ~ .date {
