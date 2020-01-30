@@ -41,8 +41,6 @@ main {
 }
 
 section .content-wrapper {
-   position: absolute;
-   left: 0;
    width: 100%;
    height: 100%;
    opacity: 0;
@@ -303,6 +301,10 @@ transition: all .5s ease;
    margin-left: 6.6vw;
 }
 
+section:nth-of-type(7):hover .dateDetails {
+   margin-left: 10.7vw;
+}
+
 
 
 .question {
@@ -371,7 +373,6 @@ section {
    width: 100vw;
    height: 20vh;
    overflow: hidden;
-   position: relative;
    -webkit-transition: all .5s;
    -o-transition: all .5s;
    transition: all .5s;
@@ -387,18 +388,22 @@ section:hover, section:active {
    transition: all .5s;
    transition-delay: .5s;
    overflow: hidden;
+   height: auto;
    /*height: 75vh;*/
+}
+
+section:nth-of-type(7) {
+   display: none;
 }
 
 section .sectionTitle:after {
    content: "+";
    float: right;
-   transition: all .5s;
+   transition: all 1s;
    transform: rotate(0deg);
    transform-origin: 30% center;
    padding-left: 0.25em;
    transform-origin: 50% 50%;
-   transition-delay: .5s;
    font-weight: 700;
 }
 
@@ -415,9 +420,6 @@ section:active .sectionTitle:after {
 
 
 section .background {
-   position: absolute;
-   left: 0;
-   top: 0;
    height: 100%;
    width: 100%;
    -webkit-transform: scale(1.0);
@@ -677,6 +679,11 @@ section:nth-child(9) .background {
    section .sectionTitle:after {
       content: '';
    }
+
+   section .sectionTitle {
+      position: absolute;
+      top: 0;
+   }
    
    section:hover .sectionTitle:after {
       content: "";
@@ -794,5 +801,11 @@ section:nth-child(9) .background {
 
    .sectionTitle {
       font-size: 1.5em;
+   }
+
+   section .content-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
    }
 }
