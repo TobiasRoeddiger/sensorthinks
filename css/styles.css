@@ -28,13 +28,13 @@
 }
 
 main {
-   margin-top: calc(66vh - 80px); /* HACK */
+   margin-top: calc(55vh - 80px); /* HACK */
    display: inline-block;
 }
 
 .mobileHeader {
    display: inline-flex;
-   height:  66vh; /* HACK */
+   height:  55vh; /* HACK */
    background: url(../images/Datum.jpg) repeat center;
    background-size: cover;
    position: relative;
@@ -176,7 +176,7 @@ br {
    left: 0; 
    top: 0;
    color: rgba(255, 32, 182 , 0.87);
-   font-size: 20.8vh;
+   font-size: 17.3vh;
    line-height: 0.8em;
    font-weight: 900; 
    font-family: Montserrat;
