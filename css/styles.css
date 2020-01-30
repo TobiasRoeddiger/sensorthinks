@@ -244,6 +244,8 @@ main:hover section:nth-of-type(8) .hackathon {
 }
 
 section:nth-of-type(7) .title {
+   position: absolute;
+   left: 0.05em;
    opacity: 0;
    color: #FF590A; /*EC2DAD*/
    font-weight: 900;
@@ -253,7 +255,6 @@ section:nth-of-type(7) .title {
       transform: rotate(-90deg);
    font-size: 10vw;
    z-index: 205;
-   left: -20vw;
    letter-spacing: 0.05em;
    margin-left: -0.1em;
    mix-blend-mode: screen;
