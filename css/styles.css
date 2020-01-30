@@ -182,7 +182,7 @@ br {
 
 .sensorthinks {
    pointer-events: none; 
-   z-index: 2; 
+   z-index: 2000; 
    position: absolute;
    left: 0; 
    top: 0;
@@ -200,7 +200,7 @@ br {
 
 .date {
    pointer-events: none; 
-   z-index: 6; 
+   z-index: 2001; 
    position: absolute; 
    color: #FF590A; 
    font-size: 9.4vh;
@@ -243,16 +243,7 @@ br {
    line-height: 0.76em;
 }
 
-section:hover ~ .date {
-   visibility: visible;
-   opacity: 1.0;
-}
-
-section:nth-child(7) {
-   display: none;
-}
-
-section:hover ~ section:nth-of-type(8) .hackathon {
+main:hover section:nth-of-type(8) .hackathon {
    mix-blend-mode: normal;
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
@@ -260,11 +251,6 @@ section:hover ~ section:nth-of-type(8) .hackathon {
    -webkit-transition-delay: 0.5s;
 		-o-transition-delay: 0.5s;
 		   transition-delay: 0.5s;
-}
-
-section:nth-of-type(7)
-{
-   position: relative !important;
 }
 
 section:nth-of-type(7) .title {
@@ -275,11 +261,11 @@ section:nth-of-type(7) .title {
    -webkit-transform: rotate(-90deg);
    -ms-transform: rotate(-90deg);
       transform: rotate(-90deg);
-   font-size: 13vh;
+   font-size: 10vw;
    z-index: 205;
-   left: -0.29em;
-   letter-spacing: 0.087em;
-   margin-top: -0.05em;
+   left: -20vw;
+   letter-spacing: 0.05em;
+   margin-left: -0.1em;
    mix-blend-mode: screen;
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
@@ -288,36 +274,33 @@ transition: all .5s ease;
    -o-transition-delay: 0.5s;
       transition-delay: 0.5s;
    top: 0;
+   line-height: 0.8em;
+   height: 100vh;
+   width: 100vh;
 }
 
-section:nth-of-type(7) .dateDetails {
-   color: #EC2DAD; /*EC2DAD*/
+.dateDetails {
+   font-family: Montserrat;
+   color: rgba(255, 32, 182 , 0.87);
    font-weight: 900;
-   font-family: Montserrat Black, Avenir Next Bold, Arial, Helvetica, sans-serif;
-   font-size: 6vw;
-   line-height: 5vw;
-   bottom: -0.5vh;
-   -webkit-transform: rotate(-90deg);
-	   -ms-transform: rotate(-90deg);
-		   transform: rotate(-90deg);
-   z-index: 100;
-   opacity: 0.0;
-   -webkit-transition: all .5s ease;
-   -o-transition: all .5s ease;
-   transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
-   letter-spacing: 1vh;
-   position: absolute;
-   height: 100vh;
-   left: 6.2vw;
-   opacity: 0.9;
-   transition: all .5s ease;
-   transition-delay: 0.5s;
-   opacity: 0;
-   width: 100vh;
+   opacity: 1.0;
    mix-blend-mode: screen;
+   top: 0;
+   font-size: 5.5vw;
+   line-height: 0.76em;
+   z-index: 205;
+   letter-spacing: 0.087em;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transform-origin: 50% 50%;
+   transform: rotate(-90deg);
+   opacity: 0;
+   transition: all 0.5s ease;
+   transition-delay: 0.5s;
+   height: 100vh;
+   width: 100vh;
+   margin-left: 6.6vw;
 }
 
 
@@ -497,6 +480,14 @@ section:nth-child(7) .background {
    background-size: cover;
 }
 
+section:nth-child(7):hover .background {
+   transform: scale(1) !important;
+}
+
+section:nth-child(7):hover {
+   width: 19vw !important;
+}
+
 section:nth-child(8) .background {
    background-image: url(../images/ampelmaennchen.png);
    background-repeat: repeat;
@@ -608,7 +599,7 @@ section:nth-child(9) .background {
       visibility: visible;
       height: 100vh;
       overflow: hidden;
-      z-index: 201;
+      z-index: 2000;
       opacity: 1.0;
       left: auto;
       margin-top: 0;
@@ -636,7 +627,7 @@ section:nth-child(9) .background {
          -o-transition-delay: 0.5s;
             transition-delay: 0.5s;
       visibility: visible;
-      z-index: 250;
+      z-index: 2001;
       letter-spacing: 0.1em;
       height: 100vh;
       mix-blend-mode: screen;
