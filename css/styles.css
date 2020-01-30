@@ -48,9 +48,6 @@ section .content-wrapper {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
    padding: 2.3em;
    padding-top: 9vh;
    font-family: Montserrat;
@@ -97,9 +94,9 @@ section:hover .content-wrapper {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
+   -webkit-transition-delay: 0s;
+		-o-transition-delay: 0s;
+		   transition-delay: 0s;
    background-color: white;
 }
 
@@ -111,9 +108,6 @@ section .content-wrapper .content {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-         transition-delay: 0.5s;
    font-weight: 500;
 }
 
@@ -167,9 +161,6 @@ section:hover .content-wrapper .content {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 1s;
-		-o-transition-delay: 1s;
-		   transition-delay: 1s;
 }
 
 br {
@@ -674,6 +665,24 @@ section:nth-child(9) .background {
       width: 400px;
       margin-top: -1.5em !important;
       border-top: 0px solid white;
+   }
+
+   section:hover .content-wrapper {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+      background-color: white;
+   }
+
+   section:hover .content-wrapper .content {
+      -webkit-transition-delay: 1s;
+      -o-transition-delay: 1s;
+      transition-delay: 1s;
    }
 
    section .sectionTitle:after {
