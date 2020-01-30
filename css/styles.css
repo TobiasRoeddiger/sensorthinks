@@ -411,22 +411,26 @@ section:hover, section:active {
 }
 
 section .sectionTitle:after {
-   content: '+';
+   content: "+";
    float: right;
    transition: all .5s;
    transform: rotate(0deg);
+   transform-origin: 30% center;
+   padding-left: 0.25em;
+   transform-origin: 50% 50%;
+   transition-delay: .5s;
+   font-weight: 700;
 }
 
 section:hover .sectionTitle:after {
    float: right;
-   transform: rotate(360deg);
-   content: "-";
+   transform: rotate(225deg) scale(1.5);
+   font-weight: 900;
 }
 
 section:active .sectionTitle:after {
    float:right;
    opacity: 1.0;
-   content: "-";
 }
 
 
@@ -518,9 +522,10 @@ section:nth-child(9) .background {
    font-weight: 700;
    padding: 0.3em 0.6em 0.3em 0.6em;
    position: absolute;
-   font-size: 1.5em;
+   font-size: 1.2em;
    width: 100vw;
-   border-top: 2px solid white;
+   border-top: 0
+   px solid white;
    letter-spacing: 0.2em;
 }
 
@@ -797,5 +802,9 @@ section:nth-child(9) .background {
 
    main:hover  .dateDetails {
       opacity: 1.0;
+   }
+
+   .sectionTitle {
+      font-size: 1.5em;
    }
 }
