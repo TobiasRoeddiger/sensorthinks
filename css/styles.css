@@ -28,13 +28,13 @@
 }
 
 main {
-   margin-top: calc(37.5vh - 80px); /* HACK */
+   margin-top: calc(66vh - 80px); /* HACK */
    display: inline-block;
 }
 
 .mobileHeader {
    display: inline-flex;
-   height:  37.5vh; /* HACK */
+   height:  66vh; /* HACK */
    background: url(../images/Datum.jpg) repeat center;
    background-size: cover;
    position: relative;
@@ -185,10 +185,11 @@ br {
    left: 0; 
    top: 0;
    color: rgba(255, 32, 182 , 0.87);
-   font-size: 11.8vh;
+   font-size: 20.8vh;
    line-height: 0.8em;
    font-weight: 900; 
    font-family: Montserrat;
+   width: 100vw;
    
    visibility: visible;
    overflow: hidden;
@@ -201,11 +202,11 @@ br {
    z-index: 2001; 
    position: absolute; 
    color: #FF590A; 
-   font-size: 9.4vh;
+   font-size: 13vh;
    line-height: 0.8em;
    opacity: 1.0; 
    font-weight:900; 
-   right: 10vw;
+   right: 0vw;
    font-family: Montserrat;
    visibility: visible;
    letter-spacing: 0.1em;
