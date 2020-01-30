@@ -488,7 +488,6 @@ section:nth-child(8) .background {
    background-color: black;
    background-origin: padding-box;
    background-position: center;
-   padding: 50px;
 }
 
 section:nth-child(9) .background {
@@ -567,7 +566,7 @@ section:nth-child(9) .background {
    }
 
    .hackathonMobile {
-      display: inline-block;
+      display: none;
    }
 
    .socialContainer {
