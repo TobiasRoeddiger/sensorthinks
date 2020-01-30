@@ -28,7 +28,7 @@
 }
 
 main {
-   margin-top: 33vh; /* HACK */
+   margin-top: calc(43.5vh - 80px); /* HACK */
    display: inline-block;
 }
 
