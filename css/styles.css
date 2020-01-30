@@ -410,7 +410,6 @@ section .sectionTitle:after {
 section:hover .sectionTitle:after {
    float: right;
    transform: rotate(225deg) scale(1.5);
-   font-weight: 900;
 }
 
 section:active .sectionTitle:after {
