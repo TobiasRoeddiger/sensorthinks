@@ -116,6 +116,7 @@ section .content-wrapper .content {
    -webkit-transition-delay: 0.5s;
 		-o-transition-delay: 0.5s;
          transition-delay: 0.5s;
+   font-weight: 500;
 }
 
 hr {
@@ -568,7 +569,7 @@ section:nth-child(9) .background {
       color: rgba(111, 178, 209, 1);
       font-size: 13vh;
       z-index: 205;
-      left: -0.29em;
+      left: -0.04em;
       letter-spacing: 0.087em;
       margin-top: -0.05em;
       mix-blend-mode: screen;
@@ -578,7 +579,7 @@ section:nth-child(9) .background {
       -webkit-transition-delay: 0.5s;
          -o-transition-delay: 0.5s;
             transition-delay: 0.5s;
-      top: 0;
+      top: 0 !important;
    }
 
    .hackathonMobile {
