@@ -581,6 +581,7 @@ section:nth-child(9) .background {
 
    .sensorthinks {
       right: 31vw !important; 
+      text-align: right;
       font-size: 33.2vh;
       line-height: 0.75em;
       -webkit-transition: all .5s ease;
