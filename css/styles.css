@@ -28,21 +28,19 @@
 }
 
 main {
-   margin-top: calc(37.5vh - 80px); /* HACK */
+   margin-top: calc(55vh - 80px); /* HACK */
    display: inline-block;
 }
 
 .mobileHeader {
    display: inline-flex;
-   height:  37.5vh; /* HACK */
+   height:  55vh; /* HACK */
    background: url(../images/Datum.jpg) repeat center;
    background-size: cover;
    position: relative;
 }
 
 section .content-wrapper {
-   position: absolute;
-   left: 0;
    width: 100%;
    height: 100%;
    opacity: 0;
@@ -50,9 +48,6 @@ section .content-wrapper {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
    padding: 2.3em;
    padding-top: 9vh;
    font-family: Montserrat;
@@ -99,9 +94,9 @@ section:hover .content-wrapper {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-		   transition-delay: 0.5s;
+   -webkit-transition-delay: 0s;
+		-o-transition-delay: 0s;
+		   transition-delay: 0s;
    background-color: white;
 }
 
@@ -113,9 +108,6 @@ section .content-wrapper .content {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 0.5s;
-		-o-transition-delay: 0.5s;
-         transition-delay: 0.5s;
    font-weight: 500;
 }
 
@@ -169,9 +161,6 @@ section:hover .content-wrapper .content {
    -webkit-transition: all .5s ease;
    -o-transition: all .5s ease;
    transition: all .5s ease;
-   -webkit-transition-delay: 1s;
-		-o-transition-delay: 1s;
-		   transition-delay: 1s;
 }
 
 br {
@@ -187,10 +176,11 @@ br {
    left: 0; 
    top: 0;
    color: rgba(255, 32, 182 , 0.87);
-   font-size: 11.8vh;
+   font-size: 17.3vh;
    line-height: 0.8em;
    font-weight: 900; 
    font-family: Montserrat;
+   width: 100vw;
    
    visibility: visible;
    overflow: hidden;
@@ -203,11 +193,11 @@ br {
    z-index: 2001; 
    position: absolute; 
    color: #FF590A; 
-   font-size: 9.4vh;
+   font-size: 13.75vh;
    line-height: 0.8em;
    opacity: 1.0; 
    font-weight:900; 
-   right: 10vw;
+   right: 0vw;
    font-family: Montserrat;
    visibility: visible;
    letter-spacing: 0.1em;
@@ -254,6 +244,8 @@ main:hover section:nth-of-type(8) .hackathon {
 }
 
 section:nth-of-type(7) .title {
+   position: absolute;
+   left: 0.05em;
    opacity: 0;
    color: #FF590A; /*EC2DAD*/
    font-weight: 900;
@@ -263,7 +255,6 @@ section:nth-of-type(7) .title {
       transform: rotate(-90deg);
    font-size: 10vw;
    z-index: 205;
-   left: -20vw;
    letter-spacing: 0.05em;
    margin-left: -0.1em;
    mix-blend-mode: screen;
@@ -301,6 +292,10 @@ transition: all .5s ease;
    height: 100vh;
    width: 100vh;
    margin-left: 6.6vw;
+}
+
+section:nth-of-type(7):hover .dateDetails {
+   margin-left: 10.7vw;
 }
 
 
@@ -371,7 +366,6 @@ section {
    width: 100vw;
    height: 20vh;
    overflow: hidden;
-   position: relative;
    -webkit-transition: all .5s;
    -o-transition: all .5s;
    transition: all .5s;
@@ -387,25 +381,28 @@ section:hover, section:active {
    transition: all .5s;
    transition-delay: .5s;
    overflow: hidden;
+   height: auto;
    /*height: 75vh;*/
+}
+
+section:nth-of-type(7) {
+   display: none;
 }
 
 section .sectionTitle:after {
    content: "+";
    float: right;
-   transition: all .5s;
+   transition: all 1s;
    transform: rotate(0deg);
    transform-origin: 30% center;
    padding-left: 0.25em;
    transform-origin: 50% 50%;
-   transition-delay: .5s;
    font-weight: 700;
 }
 
 section:hover .sectionTitle:after {
    float: right;
    transform: rotate(225deg) scale(1.5);
-   font-weight: 900;
 }
 
 section:active .sectionTitle:after {
@@ -415,9 +412,6 @@ section:active .sectionTitle:after {
 
 
 section .background {
-   position: absolute;
-   left: 0;
-   top: 0;
    height: 100%;
    width: 100%;
    -webkit-transform: scale(1.0);
@@ -495,7 +489,6 @@ section:nth-child(8) .background {
    background-color: black;
    background-origin: padding-box;
    background-position: center;
-   padding: 50px;
 }
 
 section:nth-child(9) .background {
@@ -508,7 +501,7 @@ section:nth-child(9) .background {
    z-index: 150;
    font-family: Montserrat;
    font-weight: 700;
-   padding: 0.3em 0.6em 0.3em 0.6em;
+   padding: 0.1em 0.3em 0.1em 0.3em;
    position: absolute;
    font-size: 1.2em;
    width: 100vw;
@@ -574,7 +567,7 @@ section:nth-child(9) .background {
    }
 
    .hackathonMobile {
-      display: inline-block;
+      display: none;
    }
 
    .socialContainer {
@@ -588,6 +581,7 @@ section:nth-child(9) .background {
 
    .sensorthinks {
       right: 31vw !important; 
+      text-align: right;
       font-size: 33.2vh;
       line-height: 0.75em;
       -webkit-transition: all .5s ease;
@@ -643,7 +637,7 @@ section:nth-child(9) .background {
       -webkit-transition-delay: .5s;
          -o-transition-delay: .5s;
             transition-delay: .5s;
-      padding: 0.3em 0.6em 0.3em 0.6em;
+      padding: 0.1em 0.3em 0.1em 0.3em;
       width: 100%;
       right: -50%;
       margin-top: 0 !important;
@@ -653,7 +647,7 @@ section:nth-child(9) .background {
    }
    
    .sectionTitle {
-      padding: 0.3em 0.6em 0em 0.6em;
+      padding: 0.1em 0.3em 0em 0.3em;
       right: 0;
       -webkit-transform: rotate(-90deg);
          -ms-transform: rotate(-90deg);
@@ -674,8 +668,31 @@ section:nth-child(9) .background {
       border-top: 0px solid white;
    }
 
+   section:hover .content-wrapper {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      -webkit-transition-delay: 0.5s;
+         -o-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+      background-color: white;
+   }
+
+   section:hover .content-wrapper .content {
+      -webkit-transition-delay: 1s;
+      -o-transition-delay: 1s;
+      transition-delay: 1s;
+   }
+
    section .sectionTitle:after {
       content: '';
+   }
+
+   section .sectionTitle {
+      position: absolute;
+      top: 0;
    }
    
    section:hover .sectionTitle:after {
@@ -794,5 +811,11 @@ section:nth-child(9) .background {
 
    .sectionTitle {
       font-size: 1.5em;
+   }
+
+   section .content-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
    }
 }
